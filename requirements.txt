@@ -1,0 +1,45 @@
+# ── core langchain ──────────────────────────────────────────
+langchain>=0.3
+langchain-core>=0.3
+langchain-community>=0.3
+
+# ── llm providers (keep only what you use) ──────────────────
+langchain-openai>=0.2
+langchain-anthropic>=0.2
+
+# ── langgraph ───────────────────────────────────────────────
+langgraph>=0.2
+langgraph-checkpoint>=0.1        # MemorySaver / SqliteSaver
+langgraph-checkpoint-sqlite>=0.1 # if using SQLite persistence
+
+# ── vector stores (pick one) ────────────────────────────────
+chromadb>=0.5                    # local dev
+# pinecone-client>=4             # production
+# pgvector>=0.3                  # if using Postgres
+
+# ── embeddings ──────────────────────────────────────────────
+tiktoken>=0.7                    # token counting for OpenAI
+
+# ── retrieval extras ────────────────────────────────────────
+rank-bm25>=0.2                   # BM25 sparse retrieval
+cohere>=5                        # Cohere reranker (optional)
+
+# ── document loaders ────────────────────────────────────────
+pypdf>=4                         # PDF loading
+unstructured>=0.15               # HTML, DOCX, etc.
+beautifulsoup4>=4.12             # web scraping loader
+
+# ── api layer ───────────────────────────────────────────────
+fastapi>=0.115
+uvicorn[standard]>=0.30
+pydantic>=2.7
+pydantic-settings>=2.3           # settings from .env
+
+# ── observability ───────────────────────────────────────────
+langsmith>=0.1                   # LangSmith tracing
+
+# ── utilities ───────────────────────────────────────────────
+python-dotenv>=1.0
+tenacity>=8                      # retry logic
+
+#jq
